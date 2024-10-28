@@ -1,4 +1,5 @@
-import 'package:sqflite_common_ffi/sqflite_ffi.dart';
+// import 'package:sqflite_common_ffi/sqflite_ffi.dart'; // WINDOWS APP SQLITE
+import 'package:sqflite/sqflite.dart'; // MOBILE APP SQLITE
 import 'package:path/path.dart';
 import '../models/player.dart';
 import '../models/tournament.dart';
@@ -26,8 +27,8 @@ class DatabaseService {
   }
 
   Future<Database> _initDatabase() async {
-    sqfliteFfiInit();
-    databaseFactory = databaseFactoryFfi;
+    // sqfliteFfiInit(); // WINDOWS APP SQLITE
+    // databaseFactory = databaseFactoryFfi; // WINDOWS APP SQLITE
 
     // final dbService = DatabaseService();
     // await dbService.deleteDatabaseFile();
